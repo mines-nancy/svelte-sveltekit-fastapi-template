@@ -25,7 +25,7 @@ pip3 install fastapi
 pip3 install "uvicorn[stardard]"
 ```
 
-## Clone, Install and the svelte-sveltekit-fastapi-template project
+## Clone, Install and start the svelte-sveltekit-fastapi-template project
 
 ```commandline
 git clone git@github.com:mines-nancy/svelte-sveltekit-fastapi-template.git
