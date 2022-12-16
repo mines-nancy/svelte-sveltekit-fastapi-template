@@ -13,6 +13,18 @@ sudo apt install -y nodejs
 node --version
 ```
 
+## Install FastAPI on Ubuntu 20.04
+
+Information needed to install NodeJS 18 on Ubuntu 20.04 are available here:
+> https://github.com/tiangolo/fastapi
+
+To summarize:
+```
+sudo apt install -y uvicorn
+pip3 install fastapi
+pip3 install "uvicorn[stardard]"
+```
+
 ## Clone, Install and the svelte-sveltekit-fastapi-template project
 
 ```commandline
