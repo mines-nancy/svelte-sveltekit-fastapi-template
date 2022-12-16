@@ -22,7 +22,7 @@ To summarize:
 ```
 sudo apt install -y uvicorn
 pip3 install fastapi
-pip3 install "uvicorn[stardard]"
+pip3 install "uvicorn[standard]"
 ```
 
 ## Clone, Install and start the svelte-sveltekit-fastapi-template project
