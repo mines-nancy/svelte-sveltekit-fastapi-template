@@ -75,6 +75,7 @@
     <div class="footer l-box is-center">
       Made with love.
     </div>
+    <script type="text/javascript" src="/public/js/ui.js"></script>
 
 </div>
 
