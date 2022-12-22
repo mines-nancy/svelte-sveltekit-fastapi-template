@@ -2,28 +2,30 @@
 
 <script>
 
-    import axios from "axios";
-    import { onMount } from "svelte";
+	import axios from "axios";
+	import { onMount } from "svelte";
+	import { PUBLIC_FASTAPI_URL } from '$env/static/public';
+
 	let a = 1;
 	let b = 2;
 	$: c = a + b;
 	let posts = {};
 
-    async function sendData(){
-        try {
-            // const response = await axios.get("http://localhost:8000/helloworld");
-            // const response = await axios.get("http://localhost:8000/helloworld?name=kiki&name2=kiko");
-            // const response = await axios.get("http://localhost:8000/helloworld/défdé/abc");
-            const response = await axios.post(
-                "http://localhost:8000/helloworld",
-                {"name":"nina", "age": c}
-            );
-            posts = response.data;
-            console.log(posts);
-        } catch (error) {
-            console.error(error);
-        }
-    }
+	async function sendData(){
+		try {
+			// const response = await axios.get("http://localhost:8000/helloworld");
+			// const response = await axios.get("http://localhost:8000/helloworld?name=kiki&name2=kiko");
+			// const response = await axios.get("http://localhost:8000/helloworld/défdé/abc");
+			const response = await axios.post(
+					PUBLIC_FASTAPI_URL+"/helloworld",
+					{"name":"nina", "age": c}
+			);
+			posts = response.data;
+			console.log(posts);
+		} catch (error) {
+			console.error(error);
+		}
+	}
 	onMount( () => sendData() );
 </script>
 

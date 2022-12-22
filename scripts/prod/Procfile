@@ -1,0 +1,2 @@
+sveltekit: ENV_MODE=production npm run build && ENV_MODE=production npm run preview
+fastapi: ENV_MODE=production python3 python_api/main.py

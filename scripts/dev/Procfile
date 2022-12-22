@@ -1,0 +1,2 @@
+sveltekit: ENV_MODE=development npm run dev
+fastapi: ENV_MODE=development python3 python_api/main.py
