@@ -9,7 +9,9 @@ if (process.env && process.env['ENV_MODE'] === 'development') {
 
 /** @type {import('vite').UserConfig} */
 const config = {
-	plugins: [sveltekit()],
+	plugins: [
+		sveltekit()
+	],
 	server:{
 		host: process.env["PUBLIC_SVELTEKIT_HOST"],
 		port: process.env["PUBLIC_SVELTEKIT_PORT"],
@@ -21,6 +23,9 @@ const config = {
 		port: process.env["PUBLIC_SVELTEKIT_PORT"],
 		strictPort:false,
 		cors:true
+	},
+	define: {
+		'process.env': process.env
 	}
 };
 
