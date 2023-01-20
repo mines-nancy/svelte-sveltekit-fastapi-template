@@ -22,6 +22,7 @@
 	"type": "module",
 	"dependencies": {
 		"axios": "^0.21.1",
-		"dotenv": "^16.0.3"
+		"dotenv": "^16.0.3",
+		"svelte-kit": "^1.2.0"
 	}
 }
