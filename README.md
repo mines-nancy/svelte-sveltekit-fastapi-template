@@ -56,13 +56,18 @@ pip3 install openai
 ```
 You'll also need to generate an API key :
 > https://beta.openai.com/overview
+
 1)First create an OpenAI account
+
 2)Then go to "Personnal"
 ![image](https://user-images.githubusercontent.com/95447882/214012732-f31b4c4e-9964-4fa4-b650-b0ded16dd7be.png)
+
 3)Click on "View API keys"
 ![image](https://user-images.githubusercontent.com/95447882/214013129-8662a8e2-4370-4721-941b-a7e23083096c.png)
+
 4)Click on "create new secret key"
 ![image](https://user-images.githubusercontent.com/95447882/214013555-e1c4e78c-154d-49d1-8219-79ace8681e60.png)
+
 5)Copy/paste this key in the .env file instead of "YOUR_API_KEY"
 
 ## Clone and install the svelte-sveltekit-fastapi-template project
