@@ -48,6 +48,17 @@ pip3 install pandas
 pip3 install openpyxl
 ```
 
+## Clone and install the svelte-sveltekit-fastapi-template project
+
+```commandline
+git clone git@github.com:mines-nancy/svelte-sveltekit-fastapi-template.git
+cd svelte-sveltekit-fastapi-template
+npm install
+```
+
+Copy scripts/dev/.env.example to scripts/dev/.env and modify the expected values.
+Copy scripts/prod/.env.example to scripts/prod/.env and modify the expected values.
+
 ## Install OpenAI package
 
 To summarize:
@@ -72,17 +83,6 @@ You'll also need to generate an API key :
 ![image](https://user-images.githubusercontent.com/95447882/214013555-e1c4e78c-154d-49d1-8219-79ace8681e60.png)
 
 5) Copy/paste this key in the .env file instead of "YOUR_API_KEY"
-
-## Clone and install the svelte-sveltekit-fastapi-template project
-
-```commandline
-git clone git@github.com:mines-nancy/svelte-sveltekit-fastapi-template.git
-cd svelte-sveltekit-fastapi-template
-npm install
-```
-
-Copy scripts/dev/.env.example to scripts/dev/.env and modify the expected values.
-Copy scripts/prod/.env.example to scripts/prod/.env and modify the expected values.
 
 ## Developing mode
 
