@@ -1,4 +1,4 @@
-<ins>***Nota bene : SpeechRecognition() method is not supported on Opera, OperaGX and Firefox.***</ins>
+<ins style="color : red">***Nota bene : SpeechRecognition() method is not supported on Opera, OperaGX and Firefox.***</ins>
 
 ## Install NodeJS 18 on Ubuntu 20.04
 
