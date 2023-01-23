@@ -59,7 +59,7 @@ You'll also need to generate an API key :
 
 1) First create an OpenAI account
 
-2) Then go to "Personnal"
+2) Then go to "Personal"
 
 ![image](https://user-images.githubusercontent.com/95447882/214012732-f31b4c4e-9964-4fa4-b650-b0ded16dd7be.png)
 
