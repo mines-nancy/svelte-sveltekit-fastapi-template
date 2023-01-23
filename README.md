@@ -86,7 +86,7 @@ You'll also need to generate an API key :
 
 5) Copy/paste this key in the .env file instead of "YOUR_API_KEY"
 
-![image](https://user-images.githubusercontent.com/95447882/214017357-2ddc2e7f-623e-4fe3-b98b-b53c1913231a.png)
+![image](https://user-images.githubusercontent.com/95447882/214090989-87a41253-29f6-49be-b54c-881530dd956c.png)
 
 ## Developing mode
 
