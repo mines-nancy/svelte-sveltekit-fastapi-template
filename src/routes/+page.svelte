@@ -15,7 +15,7 @@
         recognition.interimResults = true
         recognition.onresult = (event) => {
             transcript = event.results[0][0].transcript
-            console.log(transcript)
+            console.log("prompt : " + transcript)
             sendData()
         }
         recognition.start()
@@ -23,7 +23,7 @@
         const sendData = async () => {
             try {
                 const response = await axios.post(PUBLIC_FASTAPI_URL+'/predict', {text: transcript})
-                console.log(response.data)
+                console.log("GPT : " + response.data)
                 text = response.data
                 text = text.replace(/\\n/g, '\n')
                 text = text.replace(/\\u([a-fA-F0-9]{4})/g, (match, grp) => String.fromCharCode(parseInt(grp, 16)))
@@ -35,16 +35,23 @@
 
     });
 </script>
-
+<br>
+<p class="GPT">Your prompt :</p>
+<div class="GPT">
+    <p class = "response">
+        {transcript}
+    </p>
+</div>
+<br>
 <p class="GPT">GPT Answer :</p>
 <div class="GPT">
-    <p id = "response">
+    <p class = "response">
         {responseText}
     </p>
 </div>
 
 <style>
-    #response {
+    .response {
         white-space: pre-wrap;
     }
     .GPT {

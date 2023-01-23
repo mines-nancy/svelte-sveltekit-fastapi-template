@@ -42,13 +42,12 @@ async def predict(request: Request):
     data = await request.json()
     text = data["text"]
     print(text)
-    print("here")
     response = openai.Completion.create(
         model="text-davinci-003",
         prompt=(f"{text}"),
         temperature=0.5,
         max_tokens=4000,
-        top_p=1,
+        top_p=0,
         frequency_penalty=0,
         presence_penalty=0
     )
