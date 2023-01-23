@@ -48,6 +48,13 @@ pip3 install pandas
 pip3 install openpyxl
 ```
 
+## Install OpenAI package
+
+To summarize:
+```
+pip3 install openai
+```
+
 ## Clone and install the svelte-sveltekit-fastapi-template project
 
 ```commandline
