@@ -1,3 +1,5 @@
+<ins>**Nota bene : SpeechRecognition() method is not supported on Opera, OperaGX and Firefox.**</ins>
+
 ## Install NodeJS 18 on Ubuntu 20.04
 
 Information needed to install NodeJS 18 on Ubuntu 20.04 are available here:
@@ -58,6 +60,33 @@ npm install
 
 Copy scripts/dev/.env.example to scripts/dev/.env and modify the expected values.
 Copy scripts/prod/.env.example to scripts/prod/.env and modify the expected values.
+
+## Install OpenAI package
+
+To summarize:
+```
+pip3 install openai
+```
+You'll also need to generate an API key :
+> https://beta.openai.com/overview
+
+1) First create an OpenAI account
+
+2) Then go to "Personal"
+
+![image](https://user-images.githubusercontent.com/95447882/214012732-f31b4c4e-9964-4fa4-b650-b0ded16dd7be.png)
+
+3) Click on "View API keys"
+
+![image](https://user-images.githubusercontent.com/95447882/214013129-8662a8e2-4370-4721-941b-a7e23083096c.png)
+
+4) Click on "create new secret key"
+
+![image](https://user-images.githubusercontent.com/95447882/214013555-e1c4e78c-154d-49d1-8219-79ace8681e60.png)
+
+5) Copy/paste this key in the .env file instead of "YOUR_API_KEY"
+
+![image](https://user-images.githubusercontent.com/95447882/214090989-87a41253-29f6-49be-b54c-881530dd956c.png)
 
 ## Developing mode
 
