@@ -4,10 +4,10 @@ from pydantic import BaseModel
 import uvicorn
 from dotenv import load_dotenv
 import os
+import csv
 
 from fastapi import FastAPI, Request
-import openai
-import json
+
 
 
 if os.getenv('ENV_MODE') == 'development':
@@ -34,24 +34,23 @@ app.add_middleware(
     allow_headers=["*"]
 )
 
+class TimerData(BaseModel):
+    task: str
+    hours: int
+    minutes: int
+    seconds: int
+    milliseconds: int
 
-openai.api_key = os.getenv('OPEN_AI_TOKEN_API')
 
-@app.post("/predict")
-async def predict(request: Request):
-    data = await request.json()
-    text = data["text"]
-    print(text)
-    response = openai.Completion.create(
-        model="text-davinci-003",
-        prompt=(f"{text}"),
-        temperature=0.5,
-        max_tokens=4000,
-        top_p=0,
-        frequency_penalty=0,
-        presence_penalty=0
-    )
-    return json.dumps(response["choices"][0]["text"])
+@app.post("/save_timer")
+async def save_timer(data: TimerData):
+    with open("static/public/times.csv", "a") as file:
+        writer = csv.writer(file, delimiter=';')  # Utiliser le point-virgule comme séparateur
+        writer.writerow([data.task, data.hours, data.minutes, data.seconds, data.milliseconds])
+
+    return {"status": "success"}
+
+
 
 if __name__ == "__main__":
     uvicorn.run(
